@@ -1,7 +1,5 @@
 # Prediction du Prix de Vente d'une Voiture d'Occasion
 
-**Projet ML
-
 ## Description du projet
 
 Ce projet met en oeuvre un pipeline complet de Machine Learning pour predire le prix de revente de voitures d'occasion, a partir d'un dataset d'annonces issues d'une plateforme allemande (eBay Kleinanzeigen). La tache est une regression supervisee : on cherche a estimer la valeur numerique de la variable cible `price` (prix en EUR) a partir de 11 features decrivant les caracteristiques du vehicule.
@@ -10,7 +8,7 @@ Ce projet met en oeuvre un pipeline complet de Machine Learning pour predire le 
 
 ## Application deployee
 
-[Lien Streamlit Cloud](https://votre-app.streamlit.app)
+[Lien Streamlit Cloud](https://youssefrhafir.streamlit.app/)
 
 ---
 
@@ -31,8 +29,8 @@ README.md                   # Ce fichier
 ## Installation et execution
 
 ```bash
-# Cloner le depot
-git clone https://github.com/votre-user/car-price-predictor.git
+# github
+https://github.com/rhafirinfo-prog/EHTP-Projet-Module-5-Machine-Learning-ML-
 cd car-price-predictor
 
 # Installer les dependances

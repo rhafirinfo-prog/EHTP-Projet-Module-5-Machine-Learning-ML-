@@ -1,9 +1,6 @@
 # Prediction du Prix de Vente d'une Voiture d'Occasion
 
-**Projet ML – Executive Master Data Engineering (MSDE7)**  
-Enseignant : Pr. Abdelhamid Fadil
-
----
+**Projet ML
 
 ## Description du projet
 
@@ -13,7 +10,7 @@ Ce projet met en oeuvre un pipeline complet de Machine Learning pour predire le 
 
 ## Application deployee
 
-[Lien Streamlit Cloud](https://votre-app.streamlit.app) *(a mettre a jour apres deploiement)*
+[Lien Streamlit Cloud](https://votre-app.streamlit.app)
 
 ---
 
@@ -78,6 +75,4 @@ streamlit run app.py
 
 ## Auteur
 
-**YOUSSEF GHAFIR**  
-Executive Master Data Engineering – MSDE7  
-Email : yghafir@filiassur.com
+**YOUSSEF RHAFIR** MSDE7 

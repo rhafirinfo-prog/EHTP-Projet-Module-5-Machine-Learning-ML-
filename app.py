@@ -9,6 +9,10 @@ import numpy as np
 import joblib
 import json
 
+def fmt(n):
+    """Formate un nombre avec espace comme separateur de milliers (style francais)."""
+    return f"{int(n):,}".replace(",", " ")
+
 st.set_page_config(
     page_title="Prediction Prix Voiture",
     layout="wide",
@@ -63,8 +67,8 @@ with st.sidebar:
         st.success("Modele charge avec succes")
         st.markdown(f"**Algorithme :** {meta['nom_modele']}")
         st.markdown(f"**R2 (test) :** {meta['r2_test']}")
-        st.markdown(f"**RMSE (test) :** {int(meta['rmse_test']):,} EUR")
-        st.markdown(f"**MAE (test) :** {int(meta['mae_test']):,} EUR")
+        st.markdown(f"**RMSE (test) :** {fmt(meta['rmse_test'])} EUR")
+        st.markdown(f"**MAE (test) :** {fmt(meta['mae_test'])} EUR")
         st.divider()
     st.markdown("""### A propos
 Predit le prix de revente a partir des caracteristiques du vehicule.
@@ -187,7 +191,7 @@ if model_loaded:
             st.markdown(f"""
             <div class="pred-box">
                 <div class="pred-label">Prix de revente estime</div>
-                <div class="pred-value">{price_est:,.0f} EUR</div>
+                <div class="pred-value">{fmt(price_est)} EUR</div>
             </div>
             """, unsafe_allow_html=True)
 
@@ -195,9 +199,9 @@ if model_loaded:
             st.markdown(f"""
             <div class="conf-box">
                 <b>Intervalle +/- 1 RMSE</b><br><br>
-                <b>Bas :</b> {price_low:,.0f} EUR<br>
-                <b>Haut :</b> {price_high:,.0f} EUR<br><br>
-                <b>RMSE modele :</b> {rmse:,.0f} EUR<br>
+                <b>Bas :</b> {fmt(price_low)} EUR<br>
+                <b>Haut :</b> {fmt(price_high)} EUR<br><br>
+                <b>RMSE modele :</b> {fmt(rmse)} EUR<br>
                 <b>R2 modele :</b> {meta['r2_test']}
             </div>
             """, unsafe_allow_html=True)
